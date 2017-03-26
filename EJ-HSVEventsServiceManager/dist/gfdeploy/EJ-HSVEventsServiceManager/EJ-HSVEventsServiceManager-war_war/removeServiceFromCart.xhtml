@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+     <h:head>
+        <title>HSV Remove Service</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1>Remove Service from Cart</h1>
+            <br/>
+            <center>
+                <h:dataTable value="#{hsvBean.servicesInCartList}" var="s"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,cart-table-even-row"
+    		>
+
+    			<h:column>
+    				<!-- column header -->
+    				<f:facet name="header">Service Id</f:facet>
+    				<!-- row record -->
+    				#{s.serviceId}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">User ID</f:facet>
+    				#{s.userId}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Date Booked</f:facet>
+    				#{s.dateBooked}
+    			</h:column>           
+                    <h:column>
+    				<f:facet name="header">Slot Booked</f:facet>
+    				#{s.slotBooked}
+    			</h:column>                                 
+    		</h:dataTable>
+                
+                <h:selectOneMenu value="#{hsvBean.selectedService}">
+                <f:selectItems value="#{hsvBean.servicesList}" var="service"
+                               itemLabel="#{service.serviceName}" itemValue="#{service.serviceId}" />
+            </h:selectOneMenu>
+            <br/>
+            <h2>Enter the Service to remove from List</h2> <br/>
+            <h:inputText title="Service Id" id="serviceId" value="#{hsvBean.serviceId}"/>
+            <h:commandButton value="Remove" id="submit" action="#{hsvBean.removeServiceFromList()}"/>
+            </center>
+        </h:form>
+    </h:body>
+</html>

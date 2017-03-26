@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+     <h:head>
+        <title>HSV Add Service</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1>Add Service to Cart</h1>
+            <br/>
+            <center>
+                <p:dataTable value="#{hsvBean.servicesList}" var="s"
+    			scrollable="true" scrollHeight="25">
+                    <p:column headerText="Service Name" footerText="Service Name">
+                        <h:outputText value="#{s.serviceName}" />
+                    </p:column>
+                    <p:column headerText="Duration" footerText="Duration">
+                        <h:outputText value="#{s.duration}" />
+                    </p:column>
+                    <p:column headerText="Description" footerText="Description">
+                        <h:outputText value="#{s.description}" />
+                    </p:column>
+                    <p:column headerText="Cost" footerText="Cost">
+                         <h:outputText value="#{s.cost}" />
+                    </p:column>
+                    <p:column headerText="Available Slots" footerText="Available Slots">
+                        <h:outputText value="#{s.availableSlots}" />
+                    </p:column>     
+    		</p:dataTable>
+                <p:outputLabel for="service" value="Select Service: " />
+        <p:selectOneMenu id="service" value="#{hsvBean.selectedService}" effect="fold" editable="true">
+            <f:selectItem itemLabel="Select One" itemValue="" />
+            <f:selectItems value="#{hsvBean.servicesList}" var="service"
+                               itemLabel="#{service.serviceName}" itemValue="#{service.serviceId}"  />
+        </p:selectOneMenu>
+            <br/>
+        <div class="ui-grid-row">
+                <div class="ui-panelgrid-cell ui-grid-col-2">                    
+            <p:outputLabel for="slot" value="Selected Slot"/>
+                </div>
+            <div class="ui-panelgrid-cell ui-grid-col-4">
+            <p:inputText title="slot" id="slot" value="#{hsvBean.selectedSlot}"/>
+            </div>
+            </div>
+        <div class="ui-grid-row">
+                <div class="ui-panelgrid-cell ui-grid-col-2">                    
+            <p:outputLabel for="date" value="Date"/>
+                </div>
+            <div class="ui-panelgrid-cell ui-grid-col-4">
+            <p:inputText title="date" id="date" value="#{hsvBean.date}"/>
+            </div>
+            </div>
+                <p></p>  
+                
+                <h:commandButton id="submit" value="Add to List" action="#{hsvBean.addServiceToList}"/>  
+            </center>
+        </h:form>
+    </h:body>
+</html>

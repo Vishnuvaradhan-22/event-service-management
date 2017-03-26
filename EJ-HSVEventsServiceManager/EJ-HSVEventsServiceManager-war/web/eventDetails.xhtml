@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>HSV Event Details</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1>HSV Event Details</h1>
+
+            <p></p>
+            Event Id:
+            <h:inputText title="EventId" id="eventId" value="#{hsvBean.eventId}"/>
+            <p></p>
+            Event Name:
+            <h:inputText title="EventName" id="eventName" value="#{hsvBean.eventName}"/>
+            <p></p>
+            Description:
+            <h:inputText title="EventDescription" id="eventDescription" value="#{hsvBean.description}"/>
+            <p></p>
+            Date:
+            <h:inputText title="EventDate" id="eventDate" value="#{hsvBean.date}"/>
+            <p></p>
+            Cost:
+            <h:inputText title="EventCost" id="eventCost" value="#{hsvBean.cost}"/>            
+            <p></p>
+            Duration:
+            <h:inputText title="EventDuration" id="eventDuration" value="#{hsvBean.duration}"/>
+            <p></p>
+            Available Slots:
+            <h:inputText title="availableSlots" id="availableSlots" value="#{hsvBean.availableSlots}"/>            
+            <p></p>
+            <h:commandButton id="submit" value="Add to List" action="#{hsvBean.addEventList}">               
+           </h:commandButton>                            
+        </h:form>
+    </h:body>
+</html>

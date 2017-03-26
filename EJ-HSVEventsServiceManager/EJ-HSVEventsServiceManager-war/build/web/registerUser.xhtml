@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>HSV User Details</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1>HSV User Details</h1>
+
+            <p></p>
+            User Id:
+            <h:inputText title="UserId" id="userId" value="#{hsvBean.userId}"/>
+            <p></p>
+            First Name:
+            <h:inputText title="FirstName" id="firstName" value="#{hsvBean.firstName}"/>
+            <p></p>
+            Last Name
+            <h:inputText title="LastName" id="eventDescription" value="#{hsvBean.lastName}"/>
+            <p></p>
+            Email Id
+            <h:inputText title="EmailId" id="emailId" value="#{hsvBean.email}"/>
+            <p></p>
+            Password
+            <h:inputSecret title="Password" id="password" value="#{hsvBean.password}"/>            
+            <p></p>
+            Address
+            <h:inputText title="Address" id="Address" value="#{hsvBean.address}"/>
+            <p></p>
+            Contact Details
+            <h:inputText title="contactDetails" id="contact" value="#{hsvBean.contact}"/>            
+            <p></p>
+            Account Type
+            <h:inputText title="accountType" id="account" value="#{hsvBean.account}"/>            
+            <p></p>            
+            <h:commandButton id="submit" value="Add to List" action="#{hsvBean.registerUser}">               
+           </h:commandButton>                            
+        </h:form>
+    </h:body>
+</html>

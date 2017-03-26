@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+     <h:head>
+        <title>HSV View Events</title>
+        <h:outputStylesheet library="css" name="table-style.css"  />
+    </h:head>
+    <h:body>   
+        <h:form>
+            <h1>HSV Events List</h1>
+            <br/>
+            <h:dataTable value="#{hsvBean.allEventsList}" var="event"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,cart-table-even-row"
+    		>
+
+                        <h:column>
+    				<!-- column header -->
+    				<f:facet name="header">Event Id</f:facet>
+    				<!-- row record -->
+    				#{event.eventid}
+    			</h:column>
+
+    			<h:column>
+    				<!-- column header -->
+    				<f:facet name="header">Event Name</f:facet>
+    				<!-- row record -->
+    				#{event.eventname}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Duration</f:facet>
+    				#{event.duration}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Date</f:facet>
+    				#{event.date}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Cost</f:facet>
+    				#{event.cost}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Available Slots</f:facet>
+    				#{event.availableslots}
+    			</h:column>                
+                
+    			<h:column>
+    				<f:facet name="header">Description</f:facet>
+    				#{event.description}
+    			</h:column>                
+    		</h:dataTable>
+                <br/>                       
+            Event Id
+            <h:inputText id="eventId" title="Event Id" value="#{hsvBean.eventId}"/>            
+            <p></p>
+            <h:commandButton id="submit" value="Update" action="#{hsvBean.addEventUser}">               
+           </h:commandButton>                            
+        </h:form>
+    </h:body>
+</html>

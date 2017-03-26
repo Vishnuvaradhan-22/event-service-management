@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>HSV Service Details</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1>HSV Service Details</h1>
+            <p></p>    
+            <div class="ui-grid-row">
+                <div class="ui-panelgrid-cell ui-grid-col-2">
+            <p:outputLabel for="input" value="Service Id"/>
+                </div>
+                <div class="ui-panelgrid-cell ui-grid-col-4">
+            <p:inputText id="input" value="#{hsvBean.serviceId}"/>
+                </div>
+            <p></p>
+            </div>
+            <br/>
+            <div class="ui-grid-row">
+                <div class="ui-panelgrid-cell ui-grid-col-2">                    
+            <p:outputLabel for="input" value="Service Name"/>
+                </div>
+            <div class="ui-panelgrid-cell ui-grid-col-4">
+            <p:inputText title="serviceName" id="serviceName" value="#{hsvBean.serviceName}"/>
+            </div>
+            </div>
+            <p></p>
+                        <div class="ui-grid-row">
+                <div class="ui-panelgrid-cell ui-grid-col-2">                    
+            <p:outputLabel for="input" value="Service Description"/>
+                </div>
+            <div class="ui-panelgrid-cell ui-grid-col-4">
+            <p:inputText title="ServiceDescription" id="serviceDescription" value="#{hsvBean.description}"/>
+            </div>
+                        </div>
+            <p></p>
+            <div class="ui-grid-row">
+                <div class="ui-panelgrid-cell ui-grid-col-2">                    
+            <p:outputLabel for="input" value="Service Cost"/>            
+                </div>
+            <div class="ui-panelgrid-cell ui-grid-col-4">
+                <p:inputText title="ServiceCost" id="serviceCost" value="#{hsvBean.cost}"/></div>
+            </div>
+                <p></p>
+            <div class="ui-grid-row">
+                <div class="ui-panelgrid-cell ui-grid-col-2">                    
+            <p:outputLabel for="input" value="Service Duration"/>
+                </div>
+            <div class="ui-panelgrid-cell ui-grid-col-4">
+            <p:inputText title="ServiceDuration" id="serviceDuration" value="#{hsvBean.duration}"/>
+            </div>
+            </div>
+            <p></p>
+            <div class="ui-grid-row">
+                <div class="ui-panelgrid-cell ui-grid-col-2">                    
+            <p:outputLabel for="input" value="Available Slots"/>            
+                </div>
+            <div class="ui-panelgrid-cell ui-grid-col-4">
+            <p:inputText title="availableSlots" id="availableSlots" value="#{hsvBean.availableSlots}"/>            
+            </div>
+            </div>
+            <p></p>
+            <h:commandButton id="submit" value="Add to List" action="#{hsvBean.addNewService}">               
+           </h:commandButton>  
+
+        </h:form>
+    </h:body>
+</html>

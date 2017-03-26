@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+     <h:head>
+        <title>HSV View Events</title>
+        <h:outputStylesheet library="css" name="table-style.css"  />
+    </h:head>
+    <h:body>        
+            <h1>HSV Events List</h1>
+            <br/>
+            <p:dataTable value="#{hsvBean.allEventsList}" var="event"
+    			scrollable="true" scrollHeight="25">
+                <p:column headerText="Event Id" footerText="Event Id">
+                     <h:outputText value="#{event.eventid}" />
+                </p:column>
+                <p:column headerText="Event Name" footerText="Event Name">
+                    <h:outputText value="#{event.eventname}" />
+                </p:column>
+                <p:column headerText="Duration" footerText="Duration">
+                     <h:outputText value="#{event.duration}" />
+                </p:column>    			
+                <p:column headerText="Date" footerText="Date">
+                     <h:outputText value="#{event.date}" />
+                </p:column>    			
+                <p:column headerText="Cost" footerText="Cost">
+                     <h:outputText value="#{event.cost}" />
+                </p:column>    			
+                <p:column headerText="Available Slots" footerText="Available Slots">
+                     <h:outputText value="#{event.availableslots}" />
+                </p:column>
+                <p:column headerText="Description" footerText="Description">
+                     <h:outputText value="#{event.description}" />
+                </p:column>
+    		</p:dataTable>
+                <br/>                       
+                 Click <a href="faces/userHome.xhtml">here</a> Return to Events Home                                          
+    </h:body>
+</html>

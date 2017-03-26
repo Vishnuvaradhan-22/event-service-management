@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="userHome.xhtml" x="529" y="-125" zoom="true"/>
+        <Node id="deleteeventfromList.xhtml" x="575" y="254" zoom="true"/>
+        <Node id="adminHome.xhtml" x="29" y="-59" zoom="true"/>
+        <Node id="viewAllEvents.xhtml" x="36" y="135" zoom="true"/>
+        <Node id="messagePageFailure.xhtml" x="1150" y="300" zoom="true"/>
+        <Node id="removeServiceFromCart.xhtml" x="913" y="195" zoom="true"/>
+        <Node id="rescheduleService.xhtml" x="424" y="359" zoom="true"/>
+        <Node id="addFeedback.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="emptyList.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="messagePageSuccess.xhtml" x="267" y="46" zoom="true"/>
+        <Node id="completeAddEvents.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="adminLogin.xhtml" x="22" y="56" zoom="true"/>
+        <Node id="updateEventInList.xhtml" x="1152" y="122" zoom="true"/>
+        <Node id="userLogin.xhtml" x="296" y="-84" zoom="true"/>
+        <Node id="updateEventDetails.xhtml" x="629" y="495" zoom="true"/>
+        <Node id="viewBookedEventService.xhtml" x="1129" y="434" zoom="true"/>
+        <Node id="manageServiceDB.xhtml" x="890" y="112" zoom="true"/>
+        <Node id="addNewService.xhtml" x="209" y="192" zoom="true"/>
+        <Node id="index.xhtml" x="10" y="228" zoom="true"/>
+        <Node id="bookServiceHome.xhtml" x="1011" y="-76" zoom="true"/>
+        <Node id="viewAllEventsfromList.xhtml" x="150" y="750" zoom="true"/>
+        <Node id="manageService.xhtml" x="10" y="575" zoom="true"/>
+        <Node id="registerUser.xhtml" x="657" y="-52" zoom="true"/>
+        <Node id="logout.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="manageUserAccout.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="updateAdminAccount.xhtml" x="513" y="404" zoom="true"/>
+        <Node id="feedbackHome.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="cancelService.xhtml" x="927" y="1" zoom="true"/>
+        <Node id="completeServiceBooking.xhtml" x="-4" y="391" zoom="true"/>
+        <Node id="bookEvent.xhtml" x="206" y="357" zoom="true"/>
+        <Node id="eventDetails.xhtml" x="379" y="516" zoom="true"/>
+        <Node id="manageEvents.xhtml" x="556" y="105" zoom="true"/>
+        <Node id="registerEvent.xhtml" x="369" y="147" zoom="true"/>
+        <Node id="addEventsHome.xhtml" x="1210" y="-23" zoom="true"/>
+        <Node id="updateServiceDetails.xhtml" x="915" y="482" zoom="true"/>
+        <Node id="addServicetoCart.xhtml" x="939" y="355" zoom="true"/>
+        <Node id="updateAccount.xhtml" x="26" y="277" zoom="true"/>
+        <Node id="updateEventService.xhtml" x="898" y="544" zoom="true"/>
+        <Node id="viewServicesInCart.xhtml" x="584" y="327" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

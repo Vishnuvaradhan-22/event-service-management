@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>HSV Update Service</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1>Update Service! Enter the details</h1>
+ 
+            <h:selectOneRadio value="#{hsvBean.selectedValue}">
+                <f:selectItem itemValue="name" itemLabel="Name" />
+                <f:selectItem itemValue="duration" itemLabel="Duration" />
+                <f:selectItem itemValue="cost" itemLabel="Cost" />
+                <f:selectItem itemValue="slot" itemLabel="Slot" />
+                <f:selectItem itemValue="description" itemLabel="Description" />
+            </h:selectOneRadio>
+            Event New data:
+            <h:inputText id="eventData" title="Event data" value="#{hsvBean.newData}"/>
+            <h:commandButton id="submit" value="Update" action="#{hsvBean.updateAdminService}">               
+           </h:commandButton>                            
+        </h:form>
+    </h:body>
+</html>
